@@ -42,6 +42,7 @@ const Navbar = () => {
         <Link to="/cart">
           <CiShoppingCart className="cart-icon" />
         </Link>
+        <div className="cart-count">0</div>
       </div>
       <div className="menu-toggle" onClick={toggleMenu}>
         {isMenuOpen ? (
