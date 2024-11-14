@@ -1,6 +1,5 @@
-/* ProductCatalog.css */
+
 .catalog-container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -8,14 +7,15 @@
   .catalog-title {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
   }
   
   .sort-section {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 40px;
   }
   
   .sort-label {
@@ -26,12 +26,14 @@
   .sort-dropdown {
     padding: 5px;
     font-size: 1rem;
+    border-radius: 5px;
+    outline-color: black;
   }
   
   .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 30px;
   }
   
   .product-card {
@@ -40,11 +42,14 @@
     padding: 15px;
     text-align: center;
     transition: box-shadow 0.3s;
+    transition: transform 0.3s;
     background-color: #fdfdfd;
+    cursor: pointer;
   }
   
   .product-card:hover {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1.1rem)
   }
   
   .product-image {
@@ -58,13 +63,20 @@
     color: #555;
   }
   
+  .price_cart_icon{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position: relative;
+  }
+
   .product-price {
     font-size: 1.1rem;
     font-weight: bold;
     color: #222;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 768px) {
     .sort-section {
       justify-content: center;

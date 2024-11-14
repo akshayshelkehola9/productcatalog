@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './ProductCatalog.css';
 import { productData } from '../components/assets/product_data';
+import { CiShoppingCart } from 'react-icons/ci';
 
 const ProductCatalog = () => {
   const [sortOrder, setSortOrder] = useState('');
@@ -38,7 +39,11 @@ const ProductCatalog = () => {
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} className="product-image" />
             <h3 className="product-name">{product.name}</h3>
-            <p className="product-price">${product.price}</p>
+            <div className="price_cart_icon">
+            <p className="product-price">Price: ${product.price}</p>
+            <CiShoppingCart className="cart-icon" />
+            </div>
+            
           </div>
         ))}
       </div>
